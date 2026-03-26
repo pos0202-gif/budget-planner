@@ -3,85 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Budget Planner</title>
+<title>Free Conversion Tool</title>
 
 <style>
-body {
-font-family: Arial, sans-serif;
-background:#f7f7f7;
-margin:0;
-}
-
-.container {
-max-width:650px;
-margin:40px auto;
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-}
-
-h1 {
-text-align:center;
-margin-bottom:10px;
-}
-
-.sub {
-text-align:center;
-color:#666;
-}
-
-input {
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:8px;
-border:1px solid #ddd;
-}
-
-button {
-width:100%;
-padding:14px;
-background:black;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
-
-.result {
-margin-top:20px;
-padding:15px;
-background:#f3f3f3;
-border-radius:8px;
-text-align:center;
-}
-
-.section {
-margin-top:30px;
-}
-
-.box {
-background:#fafafa;
-padding:15px;
-margin:10px 0;
-border-radius:8px;
-}
-
-.cta {
-margin-top:30px;
-padding:20px;
-background:#fafafa;
-border:1px solid #eee;
-border-radius:10px;
-text-align:center;
-}
-
-.small {
-color:#777;
-font-size:13px;
-}
+body {font-family: Arial; background:#f7f7f7; margin:0;}
+.container {max-width:650px; margin:40px auto; background:white; padding:25px; border-radius:12px;}
+h1 {text-align:center;}
+.sub {text-align:center; color:#666;}
+input {width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #ddd;}
+button {width:100%; padding:14px; background:black; color:white; border:none; border-radius:8px; font-size:16px;}
+.result {margin-top:20px; padding:15px; background:#f3f3f3; border-radius:8px;}
+.section {margin-top:30px;}
+.box {background:#fafafa; padding:15px; margin:10px 0; border-radius:8px;}
+.cta {margin-top:30px; padding:20px; background:#fafafa; border:1px solid #eee; border-radius:10px; text-align:center;}
+.small {color:#777; font-size:13px;}
 </style>
 </head>
 
@@ -89,52 +24,52 @@ font-size:13px;
 
 <div class="container">
 
-<h1>Free Budget Planner</h1>
-<p class="sub">Stop guessing where your money goes.</p>
+<h1>Free Conversion Checker</h1>
+<p class="sub">Find out why people click but don’t buy.</p>
 
-<input type="number" id="income" placeholder="Monthly Income ($)">
-<input type="number" id="expenses" placeholder="Total Expenses ($)">
+<input type="number" id="clicks" placeholder="Number of clicks">
+<input type="number" id="sales" placeholder="Number of sales">
 
-<button onclick="calc()">Calculate</button>
+<button onclick="calc()">Check</button>
 
 <div class="result" id="result"></div>
 
 <div class="section">
-<h3>Why this works</h3>
-<div class="box">✔ Instantly see your real financial situation</div>
-<div class="box">✔ No signup, no complexity</div>
-<div class="box">✔ Built for real daily use</div>
+<h3>What this shows</h3>
+<div class="box">✔ Your real conversion rate</div>
+<div class="box">✔ If your offer is weak</div>
+<div class="box">✔ If your copy is the problem</div>
 </div>
 
 <div class="cta">
 
-<h3>Upgrade to Pro</h3>
+<h3>Fix Your Sales Problem</h3>
 
 <p style="font-weight:bold;">
-This free version only shows basic results.
+Clicks are not your problem.
 </p>
 
 <p>
-Get the full system to actually control your money:
+Most people fail because they don’t know what to write.
 </p>
 
 <div style="text-align:left; margin:15px 0;">
-✔ Track every expense automatically<br>
-✔ See where your money goes (visual charts)<br>
-✔ Monthly breakdown & insights<br>
-✔ Simple system you’ll actually use
+✔ High-converting copy templates<br>
+✔ Proven sales structure<br>
+✔ AI prompts that actually convert<br>
+✔ Simple system you can use instantly
 </div>
 
 <p style="margin-top:10px;">
-One-time download. Start improving today.
+One-time access. No monthly fee.
 </p>
 
 <p class="small">
-Used by people who want to stop wasting money.
+This is what turns clicks into real sales.
 </p>
 
 <a href="https://poshade7.gumroad.com/l/ai-sales-machine" target="_blank">
-<button>Get Full Version ($7)</button>
+<button>I want this</button>
 </a>
 
 </div>
@@ -143,23 +78,18 @@ Used by people who want to stop wasting money.
 
 <script>
 function calc(){
-let i = document.getElementById("income").value;
-let e = document.getElementById("expenses").value;
+let c = document.getElementById("clicks").value;
+let s = document.getElementById("sales").value;
 
-if(!i || !e){
+if(!c || !s){
 document.getElementById("result").innerHTML="Enter values";
 return;
 }
 
-let r = i - e;
-let msg = "";
-
-if(r > 500){msg="You're doing great.";}
-else if(r > 0){msg="You're stable but can improve.";}
-else{msg="You're overspending.";}
+let rate = (s / c * 100).toFixed(2);
 
 document.getElementById("result").innerHTML =
-"Remaining: $" + r + "<br><br>" + msg;
+"Conversion Rate: " + rate + "%<br><br>If this is low, your copy is the problem.";
 }
 </script>
 
