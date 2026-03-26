@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Budget Planner</title>
+
+<style>
+body {font-family: Arial; background:#f7f7f7; margin:0;}
+.container {max-width:650px; margin:40px auto; background:white; padding:25px; border-radius:12px;}
+h1 {text-align:center;}
+.sub {text-align:center; color:#666;}
+input {width:100%; padding:12px; margin:10px 0;}
+button {width:100%; padding:14px; background:black; color:white; border:none;}
+.result {margin-top:20px; padding:15px; background:#f3f3f3;}
+.section {margin-top:30px;}
+.box {background:#fafafa; padding:15px; margin:10px 0;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Free Budget Planner</h1>
+<p class="sub">Stop guessing where your money goes.</p>
+
+<input type="number" id="income" placeholder="Monthly Income ($)">
+<input type="number" id="expenses" placeholder="Total Expenses ($)">
+
+<button onclick="calc()">Calculate</button>
+
+<div class="result" id="result"></div>
+
+<div class="section">
+<h3>Why this works</h3>
+<div class="box">✔ Instantly see your real financial situation</div>
+<div class="box">✔ No signup, no complexity</div>
+<div class="box">✔ Built for real daily use</div>
+</div>
+
+<div class="section">
+<h3>Upgrade to Pro</h3>
+<p>Unlock the full system with automation, tracking & smarter insights.</p>
+
+<a href="你的Gumroad連結" target="_blank">
+<button>Get Full Version ($7)</button>
+</a>
+</div>
+
+</div>
+
+<script>
+function calc(){
+let i = document.getElementById("income").value;
+let e = document.getElementById("expenses").value;
+
+if(!i || !e){
+document.getElementById("result").innerHTML="Enter values";
+return;
+}
+
+let r = i - e;
+let msg = "";
+
+if(r > 500){msg="You're doing great.";}
+else if(r > 0){msg="You're stable but can improve.";}
+else{msg="You're overspending.";}
+
+document.getElementById("result").innerHTML =
+"Remaining: $" + r + "<br>" + msg;
+}
+</script>
+
+</body>
+</html>
