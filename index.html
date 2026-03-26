@@ -3,20 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Conversion Tool</title>
+<title>Free Conversion Checker</title>
 
 <style>
-body {font-family: Arial; background:#f7f7f7; margin:0;}
-.container {max-width:650px; margin:40px auto; background:white; padding:25px; border-radius:12px;}
-h1 {text-align:center;}
-.sub {text-align:center; color:#666;}
-input {width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #ddd;}
-button {width:100%; padding:14px; background:black; color:white; border:none; border-radius:8px; font-size:16px;}
-.result {margin-top:20px; padding:15px; background:#f3f3f3; border-radius:8px;}
-.section {margin-top:30px;}
-.box {background:#fafafa; padding:15px; margin:10px 0; border-radius:8px;}
-.cta {margin-top:30px; padding:20px; background:#fafafa; border:1px solid #eee; border-radius:10px; text-align:center;}
-.small {color:#777; font-size:13px;}
+body {
+font-family: Arial, sans-serif;
+background:#f7f7f7;
+margin:0;
+}
+
+.container {
+max-width:650px;
+margin:40px auto;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+text-align:center;
+margin-bottom:10px;
+}
+
+.sub {
+text-align:center;
+color:#666;
+}
+
+input {
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+button {
+width:100%;
+padding:14px;
+background:black;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+.result {
+margin-top:20px;
+padding:15px;
+background:#f3f3f3;
+border-radius:8px;
+text-align:center;
+}
+
+.section {
+margin-top:30px;
+}
+
+.box {
+background:#fafafa;
+padding:15px;
+margin:10px 0;
+border-radius:8px;
+}
+
+.cta {
+margin-top:30px;
+padding:20px;
+background:#fafafa;
+border:1px solid #eee;
+border-radius:10px;
+text-align:center;
+}
+
+.small {
+color:#777;
+font-size:13px;
+}
 </style>
 </head>
 
@@ -45,12 +110,19 @@ button {width:100%; padding:14px; background:black; color:white; border:none; bo
 
 <h3>Fix Your Sales Problem</h3>
 
-<p style="font-weight:bold;">
-Clicks are not your problem.
+<p style="font-size:18px; font-weight:bold;">
+If you're getting clicks but no sales,
+you're leaving money on the table.
 </p>
 
-<p>
-Most people fail because they don’t know what to write.
+<p style="color:#555;">
+This is exactly what most beginners struggle with.
+They don’t know what to say — so people don’t buy.
+</p>
+
+<p style="font-weight:bold;">
+Clicks are not your problem.
+Your words are.
 </p>
 
 <div style="text-align:left; margin:15px 0;">
@@ -61,15 +133,15 @@ Most people fail because they don’t know what to write.
 </div>
 
 <p style="margin-top:10px;">
-One-time access. No monthly fee.
+One-time access. No subscription.
 </p>
 
 <p class="small">
-This is what turns clicks into real sales.
+Used by people who want to finally make sales.
 </p>
 
 <a href="https://poshade7.gumroad.com/l/ai-sales-machine" target="_blank">
-<button>I want this</button>
+<button>Fix My Sales Now</button>
 </a>
 
 </div>
@@ -89,7 +161,7 @@ return;
 let rate = (s / c * 100).toFixed(2);
 
 document.getElementById("result").innerHTML =
-"Conversion Rate: " + rate + "%<br><br>If this is low, your copy is the problem.";
+"Conversion Rate: " + rate + "%<br><br>If this is low, your copy is likely the problem.";
 }
 </script>
 
